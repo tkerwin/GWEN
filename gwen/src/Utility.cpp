@@ -13,6 +13,9 @@ using namespace Gwen;
 
 #ifdef _MSC_VER
 #pragma warning(disable:4267)// conversion from 'size_t' to 'int', possible loss of data
+
+// va_copy doesn't exist for VC currently
+#define va_copy(dest, src) (dest = src) 
 #endif
 
 #ifdef __MINGW32__

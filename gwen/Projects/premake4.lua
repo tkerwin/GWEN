@@ -61,6 +61,11 @@ DefineRenderer( "OpenGL_DebugFont",
                 { "../Renderers/OpenGL/OpenGL.cpp",
                   "../Renderers/OpenGL/DebugFont/OpenGL_DebugFont.cpp" } )
 
+DefineRenderer( "OpenGL_BMFont",
+                { "../Renderers/OpenGL/BMFont/bmfont.cpp",
+				  "../Renderers/OpenGL/BMFont/gl_basics.cpp",
+				  "../Renderers/OpenGL/BMFont/OpenGL_BMFont.cpp" } )
+
 DefineRenderer( "SFML",
                 { "../Renderers/SFML/SFML.cpp" } )
 
