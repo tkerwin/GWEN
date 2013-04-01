@@ -4,8 +4,8 @@ solution "GWEN"
 
 	language "C++"
 	location ( os.get() .. "/" .. _ACTION )
-	flags { "Unicode", "Symbols", "NoEditAndContinue", "NoPCH",
-            "No64BitChecks", "StaticRuntime", "EnableSSE" } -- "NoRTTI"
+	flags {  "Symbols", "NoEditAndContinue", "NoPCH",
+            "No64BitChecks", "EnableSSE" } -- "NoRTTI"
 	targetdir ( "../lib/" .. os.get() .. "/" .. _ACTION )
 	libdirs { "../lib/", "../lib/" .. os.get() }
 
@@ -14,6 +14,8 @@ solution "GWEN"
 		"Release",
 		"Debug"
 	}
+
+	platforms { "x64", "x32" }
 
 	if ( _ACTION == "vs2010" or _ACTION=="vs2008" ) then
 		buildoptions { "/MP"  }
