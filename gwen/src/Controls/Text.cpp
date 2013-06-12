@@ -255,7 +255,11 @@ void Text::SplitWords(const Gwen::UnicodeString &s, std::vector<Gwen::UnicodeStr
 		{
 			int addSum = GetPadding().left+GetPadding().right;
 			//split words
+#if defined _MSC_VER && _MSC_VER < 1600
+			str.erase(str.size()-1);
+#else
 			str.pop_back();
+#endif
 			elems.push_back( str );
 			str.clear();
 			--i;
